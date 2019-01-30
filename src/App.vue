@@ -21,7 +21,7 @@ import Axios from "axios";
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
 import VideoDetail from "./components/VideoDetail";
-// import API_KEY from "../KEY_YOUTUBE";
+import API_KEY from "../KEY_YOUTUBE";
 
 export default {
   name: "App",
@@ -43,7 +43,7 @@ export default {
     onTermChange(searchTerm) {
       Axios.get("https://www.googleapis.com/youtube/v3/search", {
         params: {
-          key: "AIzaSyBFjzdSU-qJfO7COWM3FCITOwJvgF8Y88I",
+          key: API_KEY,
           type: "video",
           part: "snippet",
           q: searchTerm
